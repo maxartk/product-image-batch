@@ -1,0 +1,18 @@
+[project]
+name = "product-image-batch"
+version = "0.1.0"
+description = "Batch product photo preparation for e-shops: crop, square pad, resize, EXIF strip, manifest"
+requires-python = ">=3.9"
+dependencies = ["Pillow>=10"]
+authors = [{ name = "Maksym Kovalevskyi" }]
+license = { text = "MIT" }
+
+[project.scripts]
+img-batch = "img_batch.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
